@@ -1,0 +1,28 @@
+spring:
+    application:
+        name: Employee_Department_Management
+    datasource:
+        password: Duong170226@
+        url: jdbc:mysql://localhost:3306/atmin_db?createDatabaseIfNotExist=true
+        username: root
+    jpa:
+        hibernate:
+            ddl-auto: update
+            naming:
+                implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+                physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.MySQLDialect
+                format_sql: true
+                show_sql: true
+        open-in-view: true
+    thymeleaf:
+        cache: false
+        prefix: classpath:/templates/
+        suffix: .html
+
+    servlet:
+        multipart:
+            max-file-size: 25MB
+            max-request-size: 50MB
