@@ -19,7 +19,7 @@ public class DataSeeder implements CommandLineRunner {
     @Override
     public void run(String @NonNull ... args) {
 
-        if (departmentRepository.count() == 0) {
+        if (!departmentRepository.existsByName("Phòng IT")) {
 
             Department itDept = new Department();
             itDept.setName("Phòng IT");
